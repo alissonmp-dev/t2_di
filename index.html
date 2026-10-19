@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -127,133 +126,12 @@
 
 </body>
 </html>
-=======
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matemáticas - Funções</title>
 
-    <!-- Importação do Modern Normalize -->
-    <link rel="stylesheet" href="css/modern-normalize.css">
-    
-    <!-- Importação do Google Fonts -->
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+<!-- 
+# lista-java
+git add .                   Adiciona todos os arquivos modificados
+git commit -m "mensagem"    Salva um ponto na história com uma descrição
+git push                    Envia para o repositório remoto (GitHub/GitLab)
 
-    <!-- Importação do estilo -->
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <header class="topo-site">
-        <div class="container-header">
-            <div class="logo-area">
-                <img src="img/IFRS_logo.png" alt="Logotipo do IFRS" class="logo" width="150" height="30">
-            </div>
-            
-            <input type="checkbox" id="menu-toggle" class="menu-checkbox">
-
-            <label for="menu-toggle" class="menu-botao" aria-label="Abrir menu de navegação">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
-
-            <nav class="menu-navegacao">
-                <ul>
-                    <li><a href="#intro">Conceitos e Tipos</a></li>
-                    <li><a href="#galeria">Gráficos e Referências</a></li>
-                    <li><a href="#exercicios" class="link-inativo" onclick="return false;">Exercícios</a></li>
-                    <li><a href="#contato" class="link-inativo" onclick="return false;">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main class="conteudo-principal">
-        
-        <section id="introducao" class="sessao-texto">
-            <h1>
-                O Universo das Funções Matemáticas
-            </h1>
-            <p>
-                No Ensino Médio, o estudo das funções descreve como duas grandezas se relacionam de forma previsível. Uma função é uma regra matemática que associa cada elemento de um conjunto inicial (chamado de Domínio) a um único elemento de um conjunto final (chamado de Contradomínio). Compreender essas relações é essencial para interpretar fenômenos físicos, variações financeiras e comportamentos biológicos.
-            </p>
-
-            <h2>
-                Função Afim (ou Primeiro Grau)
-            </h2>
-            <p>
-                A função afim é representada pela lei de formação <em>f(x) = ax + b</em>, onde os coeficientes <em>a</em> e <em>b</em> são números reais e <em>a</em> deve ser diferente de zero. O coeficiente <em>a</em> determina a taxa de variação (declividade da reta), enquanto <em>b</em> representa o coeficiente linear, indicando onde o gráfico corta o eixo vertical Y. 
-            </p>
-            <p>
-                No cotidiano, a função afim modela situações simples de crescimento ou decrescimento constante, como o valor final de uma corrida de táxi (composto por uma taxa fixa mais um valor por quilômetro rodado) ou o consumo linear de combustível de um automóvel na estrada.
-            </p>
-            <div class="container-imagem-texto">
-                <img src="img/funcao_afim.png" alt="Gráfico de uma função afim mostrando uma linha reta crescente cortando os eixos cartesianos" class="imagem-educativa" width="600" height="400">
-            </div>
-
-            <h2>
-                Função Quadrática (ou Segundo Grau)
-            </h2>
-            <p>
-                Definida pela lei de formação <em>f(x) = ax² + bx + c</em> (com <em>a</em> diferente de zero), a função quadrática caracteriza-se pela presença de uma variável elevada ao quadrado. O comportamento gráfico dessa função não é uma linha reta, mas sim uma curva simétrica chamada parábola. Se o coeficiente <em>a</em> for positivo, a concavidade estará voltada para cima; se for negativo, para baixo.
-            </p>
-            <p>
-                Essa função possui papel fundamental no estudo da balística e de movimentos uniformemente variados na Física. Por exemplo, a trajetória parabólica descrita por uma bola de futebol ao ser chutada para o alto, ou o cálculo do ponto máximo de lucro e receita de uma empresa através das coordenadas do vértice da parábola.
-            </p>
-            <div class="container-imagem-texto">
-                <img src="img/funcao_quadratica.png" alt="Gráfico de uma função quadrática exibindo uma curva em formato de parábola com concavidade voltada para cima" class="imagem-educativa" width="600" height="400">
-            </div>
-        </section>
-
-        <section id="galeria" class="sessao-galeria">
-            <h2>
-                Galeria Visual de Funções
-            </h2>
-            <p class="subtitulo-galeria">Aplicações gráficas dos principais comportamentos matemáticos estudados em sala de aula.</p>
-            
-            <div class="galeria-flex">
-                <div class="galeria-item">
-                    <img src="img/galeria_crescimento_linear.png" alt="Exemplo de gráfico de função afim com crescimento linear" width="400" height="300">
-                    <h3>Crescimento Linear</h3>
-                </div>
-                <div class="galeria-item">
-                    <img src="img/galeria_movimento_parabolico.png" alt="Exemplo de parábola mostrando o ponto de altura máxima no lançamento de projéteis" width="400" height="300">
-                    <h3>Movimento Parabólico</h3>
-                </div>
-                <div class="galeria-item">
-                    <img src="img/galeria_crescimento_exponencial.png" alt="Gráfico de função exponencial representando curvas de crescimento rápido" width="400" height="300">
-                    <h3>Crescimento Exponencial</h3>
-                </div>
-                <div class="galeria-item">
-                    <img src="img/galeria_comportamento_periodico.png" alt="Gráfico de ondas senoidais representando funções trigonométricas" width="400" height="300">
-                    <h3>Comportamento Periódico</h3>
-                </div>
-            </div>
-
-            <!-- Bloco de Referências Exigido pelos critérios de direitos autorais -->
-            <div class="bloco-referencias">
-                <h3>Referências Consultadas</h3>
-                <ul>
-                    <li>DANTE, Luiz Roberto. <em>Matemática: Contexto & Aplicações</em>. Volume 1. São Paulo: Ática, 2016.</li>
-                    <li>IEZZI, Gelson; MURAKAMI, Carlos. <em>Fundamentos de Matemática Elementar</em>. Vol. 1: Conjuntos e Funções. São Paulo: Atual, 2013.</li>
-                    <li>Ministério da Educação (MEC). <em>Base Nacional Comum Curricular (BNCC)</em>. Área de Matemática e suas Tecnologias, 2018.</li>
-                </ul>
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="rodape-site">
-        <div class="container-footer">
-            <p>Desenvolvido por: <strong>Alisson Marques Peres</strong></p>
-            <p>IFRS - TADS - DESIGN DE INTERFACES</p>
-        </div>
-    </footer>
-
-</body>
-</html>
->>>>>>> 96636c4545649e65d1b553d41a1675f52fd41e6f
+401..430 | % { ni "L$_.java" } 
+-->
