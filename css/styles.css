@@ -1,0 +1,355 @@
+/* Padronizando cores/fonte para usar no code completo */
+:root {
+    --cor-primaria: #14352f;
+    --cor-secundaria: #4b6b60;
+    --cor-fundo: #f4f7f5;
+    --cor-texto: #202e2a;
+    --cor-branca: #ffffff;
+    --fonte-principal: 'Roboto', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+
+    margin: 0;
+    padding: 0;
+}
+
+/* Layout de Uma Coluna */
+.conteudo-principal {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 80px 20px 40px 20px; /* Padding superior compensa a barra fixa */
+}
+
+/* ==========================================================================
+   2. CABEÇALHO E MENU SANDUÍCHE (FIXO E SEM JAVASCRIPT)
+   ========================================================================== */
+.topo-site {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--cor-primaria);
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.logo {
+    display: block;
+    max-height: 50px;
+    width: auto;
+}
+
+/* Esconde o checkbox usado para controlar of menu */
+.menu-checkbox {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+}
+
+/* Estilização Visual do Ícone do Menu Sanduíche */
+.menu-botao {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    z-index: 1002;
+}
+
+.menu-botao span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: var(--cor-branca);
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Estado de Transição das Barras para o formato em X (Quando Aberto) */
+.menu-checkbox:checked ~ .menu-botao span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.menu-checkbox:checked ~ .menu-botao span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-checkbox:checked ~ .menu-botao span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Navegação Mobile (Escondida por Padrão no topo/direita) */
+.menu-navegacao {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 250px;
+    background-color: var(--cor-primaria);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+    box-shadow: -2px 5px 10px rgba(0,0,0,0.15);
+}
+
+.menu-navegacao ul {
+    list-style: none;
+    margin: 0;
+    padding: 20px;
+}
+
+.menu-navegacao li {
+    margin: 15px 0;
+}
+
+.menu-navegacao a {
+    color: var(--cor-branca);
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: block;
+    padding: 5px 0;
+    transition: color 0.2s;
+}
+
+.menu-navegacao a:hover {
+    color: #90cdf4;
+}
+
+/* Links Inativos exigidos pela regra de negócios */
+.link-inativo {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Exibe o Menu quando o Checkbox estiver Ativado */
+.menu-checkbox:checked ~ .menu-navegacao {
+    max-height: 300px;
+}
+
+/* ==========================================================================
+   3. SEÇÃO 1: TEXTOS EXPLICATIVOS E FIGURAS
+   ========================================================================== */
+.sessao-texto {
+    background-color: var(--cor-branca);
+    padding: 40px 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.sessao-texto h1 {
+    color: var(--cor-primaria);
+    font-size: 2.2rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 3px solid var(--cor-secundaria);
+    padding-bottom: 10px;
+}
+
+.sessao-texto h2 {
+    color: var(--cor-secundaria);
+    font-size: 1.6rem;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.sessao-texto p {
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.sessao-texto ul {
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+.sessao-texto li {
+    margin-bottom: 12px;
+}
+
+.container-imagem-texto {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.imagem-educativa {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* ==========================================================================
+   4. SEÇÃO 2: GALERIA FLEXBOX E REFERÊNCIAS
+   ========================================================================== */
+.sessao-galeria {
+    background-color: var(--cor-branca);
+    padding: 40px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+.sessao-galeria h2 {
+    color: var(--cor-primaria);
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.subtitulo-galeria {
+    color: #4a5568;
+    margin-bottom: 30px;
+}
+
+/* Organização com Flexbox */
+.galeria-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.galeria-item {
+    flex: 1 1 calc(50% - 20px); /* Ocupa metade da linha menos o gap */
+    min-width: 280px;
+    background-color: var(--cor-fundo);
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.galeria-item:hover {
+    transform: translateY(-4px);
+}
+
+.galeria-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.galeria-item h3 {
+    font-size: 1.1rem;
+    color: var(--cor-primaria);
+    margin: 15px 0;
+}
+
+/* Bloco de Referências */
+.bloco-referencias {
+    margin-top: 50px;
+    padding-top: 25px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.bloco-referencias h3 {
+    font-size: 1.2rem;
+    color: var(--cor-texto);
+    margin-bottom: 15px;
+}
+
+.bloco-referencias ul {
+    list-style-type: square;
+    padding-left: 20px;
+    font-size: 0.95rem;
+    color: #4a5568;
+}
+
+.bloco-referencias li {
+    margin-bottom: 8px;
+}
+
+/* ==========================================================================
+   5. RODAPÉ (FOOTER)
+   ========================================================================== */
+.rodape-site {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branca);
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
+
+.container-footer p {
+    margin: 5px 0;
+    opacity: 0.9;
+}
+
+.container-footer strong {
+    color: #90cdf4;
+}
+
+/* ==========================================================================
+   6. RESPONSIVIDADE (MEDIA QUERIES)
+   ========================================================================== */
+
+/* Telas Maiores e Desktops (A partir de 768px até 1920px) */
+@media screen and (min-width: 768px) {
+    /* Transforma o menu sanduíche em uma barra de navegação horizontal padrão */
+    .menu-botao {
+        display: none;
+    }
+
+    .menu-navegacao {
+        position: static;
+        width: auto;
+        max-height: none;
+        background-color: transparent;
+        box-shadow: none;
+        overflow: visible;
+    }
+
+    .menu-navegacao ul {
+        display: flex;
+        padding: 0;
+        gap: 25px;
+    }
+
+    .menu-navegacao li {
+        margin: 0;
+    }
+
+    .menu-navegacao a {
+        font-size: 1rem;
+        padding: 0;
+    }
+
+    /* Ajuste da primeira seção para telas largas */
+    .sessao-texto {
+        padding: 50px 60px;
+    }
+}
+
+/* Telas Extremamente Grandes (Garante integridade em até 1920px) */
+@media screen and (min-width: 1200px) {
+    .conteudo-principal {
+        max-width: 1000px; /* Alarga levemente a coluna principal */
+    }
+    
+    .galeria-item {
+        flex: 1 1 calc(25% - 20px); /* Divide em 4 colunas simétricas em telas grandes */
+    }
+}
